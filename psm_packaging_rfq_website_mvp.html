@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BoxRelay by PSM — Corrugated Carton Quotes in 48 Hours</title>
+  <meta name="description" content="Pan‑India corrugated carton RFQs. Western India specialists. Get quotes in 48 hours. Quality‑checked vendors with SLAs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind (CDN build for MVP; replace with compiled CSS when you scale) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --psm-yellow: #facc15; --psm-black:#0a0a0a; }
+    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .grain { background-image: radial-gradient(rgba(0,0,0,.05) 1px, transparent 1px); background-size: 3px 3px; }
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-lg bg-yellow-400 flex items-center justify-center font-black">P</div>
+        <div class="font-semibold">BoxRelay<span class="text-neutral-400"> by PSM</span></div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#industries" class="hover:text-neutral-600">Industries</a>
+        <a href="#how" class="hover:text-neutral-600">How it works</a>
+        <a href="#qc" class="hover:text-neutral-600">QC & SLA</a>
+        <a href="#rfq" class="px-3 py-1.5 rounded-lg bg-black text-white hover:bg-neutral-800">Start an RFQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="grain border-b border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-12 gap-10 items-center">
+      <div class="md:col-span-7">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+          Corrugated cartons, <span class="underline decoration-yellow-400 decoration-4 underline-offset-4">quoted in 48 hours</span>.
+        </h1>
+        <p class="mt-4 text-neutral-700 text-lg">
+          We route your RFQ to the right plant the first time — by region, spec and quantity. Western‑India backbone. Pan‑India delivery.
+        </p>
+        <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Exact fit: 3‑/5‑ply, B/C flute, custom sizes</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Strength you can trust: BF/GSM + BS/CS matched to product</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Print, sample, dispatch — managed end‑to‑end</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Audited vendors. Consistent output.</li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#rfq" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Get a quote</a>
+          <a href="#why" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">Why BoxRelay</a>
+        </div>
+        <p class="mt-4 text-sm text-neutral-500">No minimum to start. Scale when you’re ready.</p>
+      </div>
+      <div class="md:col-span-5">
+        <div class="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
+          <h3 class="font-semibold">Fast lane</h3>
+          <p class="text-sm text-neutral-600">Short on time? Share basics and we’ll call you back in 2 hours (business days).</p>
+          <form id="fast-lane" class="mt-4 grid grid-cols-1 gap-3" onsubmit="return handleFastLane(event)">
+            <input required name="name" placeholder="Your name" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <input required name="company" placeholder="Company" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <input required type="tel" name="phone" placeholder="Phone" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <input type="email" name="email" placeholder="Email (optional)" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
+            <button class="mt-2 px-4 py-2 rounded-lg bg-yellow-400 font-medium hover:bg-yellow-300">Request callback</button>
+            <p id="fast-lane-msg" class="text-sm text-green-700 hidden">Thanks! We’ll call you shortly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="mx-auto max-w-7xl px-4 py-14">
+    <h2 class="text-2xl font-bold">Built for your industry</h2>
+    <p class="text-neutral-700 mt-2">We specialise without saying no. If it needs a box, we can quote it.</p>
+    <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="p-5 bg-white border border-neutral-200 rounded-xl">
+        <h3 class="font-semibold">Textiles</h3>
+        <p class="text-sm text-neutral-600">BS 12+, CS 450+, moisture‑aware specs for yarn/texturising.</p>
+      </div>
+      <div class="p-5 bg-white border border-neutral-200 rounded-xl">
+        <h3 class="font-semibold">Pharma</h3>
+        <p class="text-sm text-neutral-600">Tight tolerances, humidity resistance, print & labeling precision.</p>
+      </div>
+      <div class="p-5 bg-white border border-neutral-200 rounded-xl">
+        <h3 class="font-semibold">F&B & QSR</h3>
+        <p class="text-sm text-neutral-600">Food‑safe inks, grease‑barrier options, high‑mix/low‑volume ready.</p>
+      </div>
+      <div class="p-5 bg-white border border-neutral-200 rounded-xl">
+        <h3 class="font-semibold">Solar & Auto</h3>
+        <p class="text-sm text-neutral-600">Heavy‑duty packaging for parts & modules with edge protection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works -->
+  <section id="how" class="bg-white border-y border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-14">
+      <h2 class="text-2xl font-bold">How it works</h2>
+      <ol class="mt-6 grid md:grid-cols-4 gap-4 text-sm">
+        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">1) Submit RFQ</span><br/>Use the form below or the fast lane.</li>
+        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">2) Vendor match</span><br/>We route to the best plant by region/spec.</li>
+        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">3) Quote in 48 hrs</span><br/>One dashboard, comparable quotes.</li>
+        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">4) QC & delivery</span><br/>Audited vendors. SLA‑bound dispatch.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- QC (brief) -->
+  <section id="qc" class="mx-auto max-w-7xl px-4 py-14">
+    <h2 class="text-2xl font-bold">Quality you can feel</h2>
+    <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="p-5 border border-neutral-200 rounded-xl bg-white">
+        <h3 class="font-semibold">Paper & strength</h3>
+        <p class="mt-2 text-neutral-700">Every order is matched to the right GSM & BF. We batch‑test BS/CS so your boxes don’t buckle in transit.</p>
+      </div>
+      <div class="p-5 border border-neutral-200 rounded-xl bg-white">
+        <h3 class="font-semibold">Dimensions & flute</h3>
+        <p class="mt-2 text-neutral-700">Tolerances within ±2 mm. B/C flute as ordered. Pins, joints, and ECT checks for stacked loads.</p>
+      </div>
+      <div class="p-5 border border-neutral-200 rounded-xl bg-white">
+        <h3 class="font-semibold">Print accuracy</h3>
+        <p class="mt-2 text-neutral-700">Signed proofs, consistent color, crisp edges. We ship samples when needed so there are no surprises.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RFQ Form (HubSpot Free CRM embed) -->
+  <section id="rfq" class="bg-neutral-50 border-t border-neutral-200">
+    <div class="mx-auto max-w-4xl px-4 py-14">
+      <h2 class="text-2xl font-bold">Start an RFQ</h2>
+      <p class="text-neutral-700 mt-2">Fill this form — your request goes straight into our CRM and we respond within 48 hours.</p>
+
+      <!--
+        HUBSPOT FORM EMBED (Free CRM).
+        1) Sign up for HubSpot Free CRM
+        2) Create a form with fields you want (below list)
+        3) Replace portalId and formId in the script
+      -->
+      <div class="mt-6 p-5 border border-neutral-200 rounded-xl bg-white">
+        <div id="hubspotForm"></div>
+        <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          window.addEventListener('load', function(){
+            if (window.hbspt && hbspt.forms) {
+              hbspt.forms.create({
+                region: "na1",
+                portalId: "YOUR_PORTAL_ID", // <-- replace
+                formId: "YOUR_FORM_ID",     // <-- replace
+                target: "#hubspotForm",
+                css: "",
+                onFormReady: function(){
+                  // Optional: add hidden context (source, campaign)
+                },
+                onFormSubmitted: function(){
+                  // Show toast
+                  alert('Thanks! Your RFQ has been received. We\'ll get back in 48 hours.');
+                }
+              });
+            }
+          });
+        </script>
+        <p class="text-xs text-neutral-500 mt-3">Fields to include: Name, Company, Email, Phone, City, Approx. Quantity, Dimensions (L×W×H), Ply/Flute, BF/GSM (if known), Print colours, Required BS/CS, Needed by date, Notes.</p>
+      </div>
+
+      <!-- Optional: Google Forms fallback (no CRM) -->
+      <details class="mt-6 text-sm">
+        <summary class="cursor-pointer text-neutral-700">No CRM yet? Use a Google Form (quick fallback)</summary>
+        <div class="mt-3 p-4 border border-neutral-200 rounded-xl bg-white">
+          <p class="text-neutral-600">Create a Google Form with the same fields and paste its share link below to embed:</p>
+          <input id="gformUrl" placeholder="https://docs.google.com/forms/d/e/.../viewform" class="mt-2 w-full px-3 py-2 border border-neutral-300 rounded-lg" />
+          <button class="mt-3 px-4 py-2 rounded-lg bg-neutral-900 text-white" onclick="embedGForm()">Embed form</button>
+          <iframe id="gformFrame" class="mt-4 w-full h-[720px] hidden border rounded-lg"></iframe>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-600 grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="font-semibold text-neutral-900">BoxRelay by PSM</div>
+        <p>Subsidiary of PSM Packaging Co. Western‑India specialists with Pan‑India vendor network.</p>
+      </div>
+      <div>
+        <div class="font-semibold text-neutral-900">Contact</div>
+        <p>Vapi, Gujarat • Mumbai, Maharashtra</p>
+        <p>+91‑9768257443 • priyankmody95@gmail.com</p>
+      </div>
+      <div>
+        <div class="font-semibold text-neutral-900">Legal</div>
+        <p>© <span id="year"></span> PSM Packaging Co. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleFastLane(e){
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      // Store lead temporarily so nothing is lost even if CRM embed fails
+      const leads = JSON.parse(localStorage.getItem('fast_leads')||'[]');
+      leads.push({...data, ts: new Date().toISOString()});
+      localStorage.setItem('fast_leads', JSON.stringify(leads));
+      document.getElementById('fast-lane-msg').classList.remove('hidden');
+      e.target.reset();
+      return false;
+    }
+    function embedGForm(){
+      const url = document.getElementById('gformUrl').value.trim();
+      if(!url) return;
+      const frame = document.getElementById('gformFrame');
+      frame.src = url;
+      frame.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
