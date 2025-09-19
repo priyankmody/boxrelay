@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BoxRelay by PSM — Corrugated Carton Quotes in 48 Hours</title>
-  <meta name="description" content="Pan‑India corrugated carton RFQs. Western India specialists. Get quotes in 48 hours. Quality‑checked vendors." />
+  <meta name="description" content="Pan‑India corrugated carton RFQs. Western India specialists. Get quotes in 48 hours. Trusted vendors. Reliable packaging." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,14 +12,13 @@
   <style>
     :root { --psm-yellow: #facc15; --psm-black:#0a0a0a; }
     html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    .grain { background-image: radial-gradient(rgba(0,0,0,.05) 1px, transparent 1px); background-size: 3px 3px; }
     html { scroll-behavior: smooth; }
+    .grain { background-image: radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px); background-size: 3px 3px; }
   </style>
-  <!-- HubSpot tracking code (free version) -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/243894501.js"></script>
 </head>
 <body class="bg-neutral-50 text-neutral-900">
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-neutral-200">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-neutral-200">
     <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="h-8 w-8 rounded-lg bg-yellow-400 flex items-center justify-center font-black">B</div>
@@ -28,13 +27,13 @@
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#industries" class="hover:text-neutral-600">Industries</a>
         <a href="#how" class="hover:text-neutral-600">How it works</a>
-        <a href="#qc" class="hover:text-neutral-600">QC</a>
-        <a href="#why" class="hover:text-neutral-600">Why Us</a>
+        <a href="#trust" class="hover:text-neutral-600">Trust</a>
         <a href="#rfq" class="px-3 py-1.5 rounded-lg bg-black text-white hover:bg-neutral-800">Start an RFQ</a>
       </nav>
     </div>
   </header>
 
+  <!-- Hero -->
   <section class="grain border-b border-neutral-200">
     <div class="mx-auto max-w-7xl px-4 py-16 grid md:grid-cols-12 gap-10 items-center">
       <div class="md:col-span-7">
@@ -42,17 +41,17 @@
           Corrugated cartons, <span class="underline decoration-yellow-400 decoration-4 underline-offset-4">quoted in 48 hours</span>.
         </h1>
         <p class="mt-4 text-neutral-700 text-lg">
-          We route your RFQ to the right plant the first time — by region, spec and quantity. Western‑India backbone. Pan‑India delivery.
+          We route your RFQ to the right plant the first time — by region, spec and quantity. Western‑India backbone. Pan‑India delivery. Trusted by businesses that care about reliable packaging.
         </p>
         <ul class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
           <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Exact fit: 3‑/5‑ply, B/C flute, custom sizes</li>
-          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Strength you can trust: BF/GSM + BS/CS matched to product</li>
+          <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Verified strength: BF/GSM + BS/CS matched to product</li>
           <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Print, sample, dispatch — managed end‑to‑end</li>
           <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-yellow-400"></span> Audited vendors. Consistent output.</li>
         </ul>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#rfq" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Get a quote</a>
-          <a href="#why" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">Why BoxRelay</a>
+          <a href="#trust" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">Why trust us</a>
         </div>
         <p class="mt-4 text-sm text-neutral-500">No minimum to start. Scale when you’re ready.</p>
       </div>
@@ -60,83 +59,136 @@
         <div class="bg-white border border-neutral-200 rounded-2xl p-6 shadow-sm">
           <h3 class="font-semibold">Fast lane</h3>
           <p class="text-sm text-neutral-600">Short on time? Share basics and we’ll call you back in 2 hours (business days).</p>
-          <form id="fast-lane" class="mt-4 grid grid-cols-1 gap-3" onsubmit="return handleFastLane(event)">
-            <input required name="name" placeholder="Your name" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-            <input required name="company" placeholder="Company" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-            <input required type="tel" name="phone" placeholder="Phone" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-            <input type="email" name="email" placeholder="Email (optional)" class="px-3 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" />
-            <button class="mt-2 px-4 py-2 rounded-lg bg-yellow-400 font-medium hover:bg-yellow-300">Request callback</button>
-            <p id="fast-lane-msg" class="text-sm text-green-700 hidden">Thanks! We’ll call you shortly.</p>
-          </form>
+          <div class="mt-4">
+            <script src="https://js-na2.hsforms.net/forms/embed/243894501.js" defer></script>
+            <div class="hs-form-frame" data-region="na2" data-form-id="85f0b8c5-5ff7-400d-9dba-8ba23797671e" data-portal-id="243894501"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Industries -->
   <section id="industries" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl font-bold">Built for your industry</h2>
-    <p class="text-neutral-700 mt-2">We specialise without saying no. If it needs a box, we can quote it.</p>
+    <h2 class="text-2xl font-bold">Built for Indian industries</h2>
+    <p class="text-neutral-700 mt-2">From Surat textiles to Hyderabad pharma — if it needs a box, we can quote it.</p>
     <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div class="p-5 bg-white border border-neutral-200 rounded-xl">
         <h3 class="font-semibold">Textiles</h3>
-        <p class="text-sm text-neutral-600">BS 12+, CS 450+, moisture‑aware specs for yarn/texturising.</p>
+        <p class="text-sm text-neutral-600">BS 12+, CS 450+, moisture‑aware specs for yarn/texturising plants in Surat & Vapi.</p>
       </div>
       <div class="p-5 bg-white border border-neutral-200 rounded-xl">
         <h3 class="font-semibold">Pharma</h3>
-        <p class="text-sm text-neutral-600">Tight tolerances, humidity resistance, print & labeling precision.</p>
+        <p class="text-sm text-neutral-600">Tight tolerances, humidity resistance, print & labeling precision for hubs like Ahmedabad & Hyderabad.</p>
       </div>
       <div class="p-5 bg-white border border-neutral-200 rounded-xl">
-        <h3 class="font-semibold">F&B & QSR</h3>
-        <p class="text-sm text-neutral-600">Food‑safe inks, grease‑barrier options, high‑mix/low‑volume ready.</p>
+        <h3 class="font-semibold">FMCG & QSR</h3>
+        <p class="text-sm text-neutral-600">Food‑safe inks, grease‑barrier options, high‑mix/low‑volume ready for Mumbai & Pune brands.</p>
       </div>
       <div class="p-5 bg-white border border-neutral-200 rounded-xl">
         <h3 class="font-semibold">Solar & Auto</h3>
-        <p class="text-sm text-neutral-600">Heavy‑duty packaging for parts & modules with edge protection.</p>
+        <p class="text-sm text-neutral-600">Heavy‑duty packaging for parts & modules across Gujarat & Maharashtra belts.</p>
       </div>
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section id="why" class="mx-auto max-w-7xl px-4 py-14">
-    <h2 class="text-2xl font-bold">Why BoxRelay</h2>
-    <div class="mt-6 grid md:grid-cols-3 gap-6">
-      <div class="p-6 bg-white border border-neutral-200 rounded-xl">
-        <h3 class="font-semibold">Right plant, first time</h3>
-        <p class="mt-2 text-neutral-700 text-sm">We match by region, spec, and capacity so quotes are realistic — not wishful.</p>
-      </div>
-      <div class="p-6 bg-white border border-neutral-200 rounded-xl">
-        <h3 class="font-semibold">Spec confidence</h3>
-        <p class="mt-2 text-neutral-700 text-sm">GSM/BF set correctly; BS/CS samples on request. Your boxes won’t collapse in transit.</p>
-      </div>
-      <div class="p-6 bg-white border border-neutral-200 rounded-xl">
-        <h3 class="font-semibold">Western backbone, Pan‑India reach</h3>
-        <p class="mt-2 text-neutral-700 text-sm">Local speed in Gujarat–Maharashtra; vendor network across India for scale.</p>
-      </div>
-    </div>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a href="#rfq" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Start your RFQ</a>
-      <a href="#how" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">See how it works</a>
-    </div>
-  </section>
-
+  <!-- How it Works -->
   <section id="how" class="bg-white border-y border-neutral-200">
     <div class="mx-auto max-w-7xl px-4 py-14">
       <h2 class="text-2xl font-bold">How it works</h2>
       <ol class="mt-6 grid md:grid-cols-4 gap-4 text-sm">
         <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">1) Submit RFQ</span><br/>Use the form below or the fast lane.</li>
         <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">2) Vendor match</span><br/>We route to the best plant by region/spec.</li>
-        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">3) Quote in 48 hrs</span><br/>One dashboard, comparable quotes.</li>
-        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">4) QC & delivery</span><br/>Audited vendors. SLA‑bound dispatch.</li>
+        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">3) Quote in 48 hrs</span><br/>Clear, comparable quotes.</li>
+        <li class="p-5 border border-neutral-200 rounded-xl bg-neutral-50"><span class="font-semibold">4) QC & delivery</span><br/>Audited vendors. Transparent timelines.</li>
       </ol>
     </div>
   </section>
 
+  <!-- Trust Section -->
+  <section id="trust" class="mx-auto max-w-7xl px-4 py-14">
+    <h2 class="text-2xl font-bold">Why businesses across India trust BoxRelay</h2>
+
+    <!-- Trust Cards -->
+    <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
+      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Backed by PSM Packaging</h3>
+        <p class="mt-2 text-neutral-700">Indian packaging know‑how, honed over decades. We understand local supply chains, transport realities, and buyer expectations.</p>
+      </div>
+      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Verified vendor network</h3>
+        <p class="mt-2 text-neutral-700">Plants audited across Gujarat & Maharashtra — with expansion across NCR, Telangana & Karnataka. GSM/BF checks and dispatch tracking as standard.</p>
+      </div>
+      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Transparent process</h3>
+        <p class="mt-2 text-neutral-700">Quotes in writing, spec‑wise comparisons, no hidden charges — so your procurement approvals move quickly.</p>
+      </div>
+    </div>
+
+    <!-- India Stats Strip -->
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="p-4 bg-neutral-900 text-white rounded-xl text-center">
+        <div class="text-2xl font-extrabold">Western India</div>
+        <div class="text-xs mt-1 opacity-80">Vapi • Daman • Silvassa • Mumbai</div>
+      </div>
+      <div class="p-4 bg-white border border-neutral-200 rounded-xl text-center">
+        <div class="text-2xl font-extrabold">Pan‑India</div>
+        <div class="text-xs mt-1 text-neutral-600">NCR • Telangana • Karnataka</div>
+      </div>
+      <div class="p-4 bg-white border border-neutral-200 rounded-xl text-center">
+        <div class="text-2xl font-extrabold">48 hrs</div>
+        <div class="text-xs mt-1 text-neutral-600">Quote turnaround</div>
+      </div>
+      <div class="p-4 bg-white border border-neutral-200 rounded-xl text-center">
+        <div class="text-2xl font-extrabold">Made in India</div>
+        <div class="text-xs mt-1 text-neutral-600">Local vendors, local logistics</div>
+      </div>
+    </div>
+
+    <!-- Badges Row (SVG placeholders) -->
+    <div class="mt-10 grid md:grid-cols-5 gap-4 items-center">
+      <div class="flex items-center justify-center p-4 rounded-xl border border-neutral-200 bg-white">
+        <div class="flex items-center gap-2 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-neutral-700"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5 20l2-7L1.9 9H9l3-7z"/></svg><span>ISO 9001 (process‑aligned)</span></div>
+      </div>
+      <div class="flex items-center justify-center p-4 rounded-xl border border-neutral-200 bg-white">
+        <div class="flex items-center gap-2 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-neutral-700"><circle cx="12" cy="12" r="10"/><path d="M6 12h12M6 12s2-4 6-4 6 4 6 4-2 4-6 4-6-4-6-4z"/></svg><span>ICCMA affinity</span></div>
+      </div>
+      <div class="flex items-center justify-center p-4 rounded-xl border border-neutral-200 bg-white">
+        <div class="flex items-center gap-2 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-neutral-700"><path d="M3 12l9-9 9 9-9 9-9-9z"/></svg><span>Made in India</span></div>
+      </div>
+      <div class="flex items-center justify-center p-4 rounded-xl border border-neutral-200 bg-white">
+        <div class="flex items-center gap-2 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-neutral-700"><path d="M4 4h16v6H4zM4 14h8v6H4z"/></svg><span>Spec‑wise quotes</span></div>
+      </div>
+      <div class="flex items-center justify-center p-4 rounded-xl border border-neutral-200 bg-white">
+        <div class="flex items-center gap-2 text-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="text-neutral-700"><path d="M20 7l-8 10-4-5-4 5"/></svg><span>Audited plants</span></div>
+      </div>
+    </div>
+
+    <!-- Testimonials with Indian context -->
+    <div class="mt-10 grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Texturising Mill, Vapi</h3>
+        <blockquote class="mt-2 italic text-neutral-700">“Cartons matched BS 12+ / CS 450+ and reached our warehouse on time. BoxRelay saved us the back‑and‑forth.”</blockquote>
+      </div>
+      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
+        <h3 class="font-semibold">Pharma SME, Ahmedabad</h3>
+        <blockquote class="mt-2 italic text-neutral-700">“Helpful specs, clean quotes, and consistent print quality. Our approvals moved faster with their documentation.”</blockquote>
+      </div>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#rfq" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Start your RFQ</a>
+      <a href="#how" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">See how it works</a>
+    </div>
+  </section>
+
+  <!-- QC (brief) -->
   <section id="qc" class="mx-auto max-w-7xl px-4 py-14">
     <h2 class="text-2xl font-bold">Quality you can feel</h2>
     <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
       <div class="p-5 border border-neutral-200 rounded-xl bg-white">
         <h3 class="font-semibold">Paper & strength</h3>
-        <p class="mt-2 text-neutral-700">Every order is matched to the right GSM & BF. We batch‑test BS/CS so your boxes don’t buckle in transit.</p>
+        <p class="mt-2 text-neutral-700">Every order matched to the right GSM & BF. Batch‑tested BS/CS so your boxes don’t buckle in transit.</p>
       </div>
       <div class="p-5 border border-neutral-200 rounded-xl bg-white">
         <h3 class="font-semibold">Dimensions & flute</h3>
@@ -144,36 +196,17 @@
       </div>
       <div class="p-5 border border-neutral-200 rounded-xl bg-white">
         <h3 class="font-semibold">Print accuracy</h3>
-        <p class="mt-2 text-neutral-700">Signed proofs, consistent color, crisp edges. We ship samples when needed so there are no surprises.</p>
+        <p class="mt-2 text-neutral-700">Signed proofs, consistent color, crisp edges. Samples when needed so there are no surprises.</p>
       </div>
     </div>
   </section>
 
-  <section id="why" class="mx-auto max-w-7xl px-4 py-14 bg-neutral-50 border-t border-neutral-200">
-    <h2 class="text-2xl font-bold">Why BoxRelay</h2>
-    <p class="mt-2 text-neutral-700">Because packaging should be simple, reliable, and scalable.</p>
-    <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
-      <div class="p-5 border border-neutral-200 rounded-xl bg-white">
-        <h3 class="font-semibold">Western India roots</h3>
-        <p class="mt-2 text-neutral-700">Proximity to Vapi, Silvassa, and Mumbai hubs means faster lead times and lower freight costs.</p>
-      </div>
-      <div class="p-5 border border-neutral-200 rounded-xl bg-white">
-        <h3 class="font-semibold">Pan‑India network</h3>
-        <p class="mt-2 text-neutral-700">We’ve got vetted vendors across India, so your cartons are delivered where you need them.</p>
-      </div>
-      <div class="p-5 border border-neutral-200 rounded-xl bg-white">
-        <h3 class="font-semibold">Client‑first promise</h3>
-        <p class="mt-2 text-neutral-700">Our process is built around 48‑hour quotes, QC checks, and transparency at every step.</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- RFQ Form -->
   <section id="rfq" class="bg-neutral-50 border-t border-neutral-200">
     <div class="mx-auto max-w-4xl px-4 py-14">
       <h2 class="text-2xl font-bold">Start an RFQ</h2>
       <p class="text-neutral-700 mt-2">Tell us what you need, and we’ll handle the rest. Quotes in 48 hours, no chasing vendors.</p>
       <div class="mt-6 p-5 border border-neutral-200 rounded-xl bg-white">
-        <!-- HubSpot embed (Free). For redirect, set Thank‑You URL to https://priyankmody.github.io/boxrelay/#thank-you in HubSpot form options. -->
         <script src="https://js-na2.hsforms.net/forms/embed/243894501.js" defer></script>
         <div class="hs-form-frame" data-region="na2" data-form-id="36dcb077-ebee-44a2-bc2d-06ca78001526" data-portal-id="243894501"></div>
         <p class="text-xs text-neutral-500 mt-3">By submitting, you’ll receive an email confirmation and a call/email within 48 hours.</p>
@@ -181,19 +214,7 @@
     </div>
   </section>
 
-  <!-- THANK YOU (hash-route) -->
-  <section id="thank-you" class="mx-auto max-w-3xl px-4 py-20 hidden">
-    <div class="p-8 rounded-2xl border border-neutral-200 bg-white text-center">
-      <h2 class="text-3xl font-extrabold">Thanks! Your RFQ is in.</h2>
-      <p class="mt-3 text-neutral-700">We’re matching your request to the right plant. Expect your first response within <strong>48 hours</strong>.</p>
-      <div class="mt-6 flex justify-center gap-3">
-        <a href="#industries" class="px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">Explore industries</a>
-        <a href="#rfq" class="px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Submit another RFQ</a>
-      </div>
-      <p class="mt-4 text-sm text-neutral-500">Need something urgent? Call us at +91‑9768257443.</p>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer class="border-t border-neutral-200">
     <div class="mx-auto max-w-7xl px-4 py-10 text-sm text-neutral-600 grid md:grid-cols-3 gap-6">
       <div>
@@ -212,54 +233,10 @@
     </div>
   </footer>
 
-  <!-- HubSpot tracking (Free) -->
+  <!-- HubSpot tracking -->
   <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/243894501.js"></script>
-
   <script>
-    // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Fast-lane local cache safeguard
-    function handleFastLane(e){
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(e.target).entries());
-      const leads = JSON.parse(localStorage.getItem('fast_leads')||'[]');
-      leads.push({...data, source:'fast-lane', ts: new Date().toISOString()});
-      localStorage.setItem('fast_leads', JSON.stringify(leads));
-      document.getElementById('fast-lane-msg').classList.remove('hidden');
-      e.target.reset();
-      return false;
-    }
-
-    // Hash-route: show Thank You section when redirected to #thank-you
-    function showThankYouIfNeeded(){
-      if (location.hash === '#thank-you') {
-        const sec = document.getElementById('thank-you');
-        if (sec) { sec.classList.remove('hidden'); sec.scrollIntoView({behavior:'smooth'}); }
-      }
-    }
-    window.addEventListener('hashchange', showThankYouIfNeeded);
-    window.addEventListener('DOMContentLoaded', showThankYouIfNeeded);
   </script>
-</body>
-</html>
-
-<!-- thankyou.html -->
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You — BoxRelay</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-neutral-50 text-neutral-900 flex items-center justify-center h-screen">
-  <div class="max-w-lg text-center p-8 bg-white border border-neutral-200 rounded-2xl shadow-sm">
-    <h1 class="text-3xl font-bold">Thank you!</h1>
-    <p class="mt-4 text-neutral-700">We’ve received your RFQ. Expect quotes in your inbox within <strong>48 hours</strong>.</p>
-    <p class="mt-2 text-neutral-600">Need something urgent? Call us at +91‑9768257443.</p>
-    <a href="index.html" class="mt-6 inline-block px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Back to Home</a>
-  </div>
 </body>
 </html>
