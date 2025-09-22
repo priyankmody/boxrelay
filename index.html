@@ -169,18 +169,6 @@
       </div>
     </div>
 
-    <!-- Testimonials with Indian context -->
-    <div class="mt-10 grid md:grid-cols-2 gap-6">
-      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
-        <h3 class="font-semibold">Plant Head at a Texturising Mill, Vapi, Gujarat</h3>
-        <blockquote class="mt-2 italic text-neutral-700">“Cartons matched BS 12+ / CS 450+ and reached our warehouse on time. BoxRelay saved us the back‑and‑forth.”</blockquote>
-      </div>
-      <div class="p-6 bg-white border border-neutral-200 rounded-xl shadow-sm">
-        <h3 class="font-semibold">Pharma SME, Ahmedabad</h3>
-        <blockquote class="mt-2 italic text-neutral-700">“Helpful specs, clean quotes, and consistent print quality. Our approvals moved faster with their documentation.”</blockquote>
-      </div>
-    </div>
-
     <div class="mt-8 flex flex-wrap gap-3">
       <a href="#rfq" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-black text-white hover:bg-neutral-800">Start your RFQ</a>
       <a href="#how" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-neutral-300 hover:border-neutral-400">See how it works</a>
@@ -193,27 +181,27 @@
       <h2 class="text-2xl font-bold text-center">What clients say about us</h2>
       <div class="mt-8 relative overflow-hidden">
         <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-in-out">
-          <div class="min-w-full p-6 bg-white border border-neutral-200 rounded-xl shadow-sm mx-2">
+          <div class="slide w-full md:w-1/2 flex-shrink-0 p-6 bg-white border border-neutral-200 rounded-xl shadow-sm md:mx-2">
             <h3 class="font-semibold">Plant Head at a Texturising Mill, Vapi, Gujarat</h3>
             <blockquote class="mt-2 italic text-neutral-700">“Cartons matched BS 12+ / CS 450+ and reached our warehouse on time. BoxRelay saved us the back‑and‑forth.”</blockquote>
             <p class="mt-3 text-sm text-neutral-600">Volume: ~60 metric tonnes / month</p>
           </div>
-          <div class="min-w-full p-6 bg-white border border-neutral-200 rounded-xl shadow-sm mx-2">
+          <div class="slide w-full md:w-1/2 flex-shrink-0 p-6 bg-white border border-neutral-200 rounded-xl shadow-sm md:mx-2">
             <h3 class="font-semibold">Operations Director at a Pharma SME, Daman, Dadra & Nagar Haveli and Daman & Diu</h3>
             <blockquote class="mt-2 italic text-neutral-700">“Spec‑wise quotes and humidity‑aware cartons improved our outbound rejections.”</blockquote>
             <p class="mt-3 text-sm text-neutral-600">Volume: ~30 metric tonnes / month</p>
           </div>
-          <div class="min-w-full p-6 bg-white border border-neutral-200 rounded-xl shadow-sm mx-2">
+          <div class="slide w-full md:w-1/2 flex-shrink-0 p-6 bg-white border border-neutral-200 rounded-xl shadow-sm md:mx-2">
             <h3 class="font-semibold">Supply Chain Manager at a Solar Components Firm, Surat, Gujarat</h3>
             <blockquote class="mt-2 italic text-neutral-700">“Edge‑protection and ECT checks reduced transit damages for panel parts.”</blockquote>
             <p class="mt-3 text-sm text-neutral-600">Volume: ~25 metric tonnes / month</p>
           </div>
-          <div class="min-w-full p-6 bg-white border border-neutral-200 rounded-xl shadow-sm mx-2">
+          <div class="slide w-full md:w-1/2 flex-shrink-0 p-6 bg-white border border-neutral-200 rounded-xl shadow-sm md:mx-2">
             <h3 class="font-semibold">Procurement Lead at an FMCG Co‑packer, Bhiwandi, Maharashtra</h3>
             <blockquote class="mt-2 italic text-neutral-700">“On‑time dispatch and consistent print kept our launches on track.”</blockquote>
             <p class="mt-3 text-sm text-neutral-600">Volume: ~40 metric tonnes / month</p>
           </div>
-          <div class="min-w-full p-6 bg-white border border-neutral-200 rounded-xl shadow-sm mx-2">
+          <div class="slide w-full md:w-1/2 flex-shrink-0 p-6 bg-white border border-neutral-200 rounded-xl shadow-sm md:mx-2">
             <h3 class="font-semibold">Plant Supervisor at a Chemical Packaging Unit, Navi Mumbai, Maharashtra</h3>
             <blockquote class="mt-2 italic text-neutral-700">“Stacking strength held up in warehouse heat. Good price consistency.”</blockquote>
             <p class="mt-3 text-sm text-neutral-600">Volume: ~35 metric tonnes / month</p>
@@ -230,14 +218,46 @@
   </section>
 
   <script>
-    let index = 0;
-    const carousel = document.getElementById('testimonial-carousel');
-    const total = carousel.children.length;
-    function showSlide(){
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-    }
-    function nextTestimonial(){ index = (index+1) % total; showSlide(); }
-    function prevTestimonial(){ index = (index-1+total) % total; showSlide(); }
+    (function(){
+      const carousel = document.getElementById('testimonial-carousel');
+      const slides = Array.from(carousel.querySelectorAll('.slide'));
+      let index = 0;
+      let startX = 0; let currentX = 0; let isDragging = false;
+
+      function visibleCount(){ return window.innerWidth >= 768 ? 2 : 1; }
+      function maxIndex(){ return Math.max(0, slides.length - visibleCount()); }
+      function slideWidth(){ return slides[0].getBoundingClientRect().width; }
+      function update(){
+        const offset = index * (slideWidth());
+        carousel.style.transform = `translateX(-${offset}px)`;
+      }
+      function next(){ index = Math.min(maxIndex(), index + 1); update(); }
+      function prev(){ index = Math.max(0, index - 1); update(); }
+
+      // Buttons
+      window.nextTestimonial = next; window.prevTestimonial = prev;
+
+      // Resize handler to keep alignment
+      window.addEventListener('resize', () => { update(); });
+
+      // Touch / drag support
+      const threshold = 50; // px
+      carousel.addEventListener('touchstart', (e)=>{ isDragging = true; startX = e.touches[0].clientX; }, {passive:true});
+      carousel.addEventListener('touchmove', (e)=>{ if(!isDragging) return; currentX = e.touches[0].clientX; }, {passive:true});
+      carousel.addEventListener('touchend', ()=>{
+        if(!isDragging) return; const dx = currentX - startX; isDragging = false; currentX = startX = 0;
+        if (Math.abs(dx) > threshold){ dx < 0 ? next() : prev(); }
+      }, {passive:true});
+
+      // Mouse drag (desktop)
+      let mouseDown = false; let mStartX = 0; let mCurrentX = 0;
+      carousel.addEventListener('mousedown', (e)=>{ mouseDown = true; mStartX = e.clientX; });
+      document.addEventListener('mousemove', (e)=>{ if(!mouseDown) return; mCurrentX = e.clientX; });
+      document.addEventListener('mouseup', ()=>{ if(!mouseDown) return; const dx = mCurrentX - mStartX; mouseDown = false; if (Math.abs(dx) > threshold){ dx < 0 ? next() : prev(); }});
+
+      // Init
+      update();
+    })();
   </script>
 
   <!-- QC (brief) -->
