@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About — BoxRelay by PSM</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-50 text-neutral-900" style="font-family:Inter,system-ui,Arial,sans-serif">
+  <header class="border-b border-neutral-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="/"><img src="/logo.svg" class="h-8 w-auto" alt="BoxRelay"/></a>
+      <a href="/#rfq" class="px-3 py-1.5 rounded-lg bg-black text-white text-sm">Start an RFQ</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-extrabold">About BoxRelay</h1>
+    <p class="mt-4 text-neutral-700">
+      BoxRelay, powered by PSM Packaging, connects Indian industries with verified corrugated carton plants.
+      From Vapi to Pan-India, we guarantee spec-checked cartons, transparent quotes, and reliable supply.
+      Our mission is simple: simplify procurement with speed, trust, and scale.
+    </p>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-4 text-sm">
+      <div class="p-4 bg-white border border-neutral-200 rounded-xl">ISO-aligned QC</div>
+      <div class="p-4 bg-white border border-neutral-200 rounded-xl">Audited Vendors</div>
+      <div class="p-4 bg-white border border-neutral-200 rounded-xl">Quotes in 48 hrs</div>
+    </div>
+
+    <div class="mt-10">
+      <h2 class="text-xl font-bold">Contact</h2>
+      <p class="mt-2 text-neutral-700">
+        Vapi, Gujarat • Mumbai, Maharashtra<br/>
+        📞 +91-9768257443<br/>
+        📧 <a class="underline" href="mailto:info@boxrelay.in">info@boxrelay.in</a> | <a class="underline" href="mailto:sales@boxrelay.in">sales@boxrelay.in</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="border-t border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-neutral-600 flex items-center justify-between">
+      <span>© <span id="year"></span> BoxRelay by PSM Packaging</span>
+      <nav class="space-x-4">
+        <a class="underline" href="/terms.html">Terms</a>
+        <a class="underline" href="/privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
