@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Privacy — BoxRelay</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-50 text-neutral-900" style="font-family:Inter,system-ui,Arial,sans-serif">
+  <header class="border-b border-neutral-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="/"><img src="/logo.svg" class="h-8 w-auto" alt="BoxRelay"/></a>
+      <a href="/#rfq" class="px-3 py-1.5 rounded-lg bg-black text-white text-sm">Start an RFQ</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-extrabold">Privacy Policy</h1>
+    <p class="mt-4 text-neutral-700">
+      We respect your privacy. Information submitted through our RFQ forms is used to respond to your requests,
+      prepare quotes, and improve our services. We do not sell your data.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Data We Collect</h2>
+    <p class="mt-2 text-neutral-700">
+      Contact details, company information, and packaging specifications submitted through forms or communications.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">How We Use Data</h2>
+    <p class="mt-2 text-neutral-700">
+      To process RFQs, coordinate with vendor partners, deliver quotes, and provide customer support.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Third-Party Services</h2>
+    <p class="mt-2 text-neutral-700">
+      We use HubSpot for forms and analytics. Their collection and processing are governed by their policies.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Contact</h2>
+    <p class="mt-2 text-neutral-700">
+      For privacy queries, email <a class="underline" href="mailto:info@boxrelay.in">info@boxrelay.in</a>.
+    </p>
+  </main>
+
+  <footer class="border-t border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-neutral-600 flex items-center justify-between">
+      <span>© <span id="year"></span> BoxRelay by PSM Packaging</span>
+      <nav class="space-x-4">
+        <a class="underline" href="/about.html">About</a>
+        <a class="underline" href="/terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
