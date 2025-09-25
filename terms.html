@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Terms — BoxRelay</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-50 text-neutral-900" style="font-family:Inter,system-ui,Arial,sans-serif">
+  <header class="border-b border-neutral-200 bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="/"><img src="/logo.svg" class="h-8 w-auto" alt="BoxRelay"/></a>
+      <a href="/#rfq" class="px-3 py-1.5 rounded-lg bg-black text-white text-sm">Start an RFQ</a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-3xl px-4 py-12">
+    <h1 class="text-3xl font-extrabold">Terms of Use</h1>
+    <p class="mt-4 text-neutral-700">
+      These Terms govern your use of the BoxRelay website and services. By accessing or using our site,
+      you agree to these Terms. If you do not agree, please do not use the site.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Use of the Site</h2>
+    <p class="mt-2 text-neutral-700">
+      You may use the site to submit RFQs and review information about our services.
+      You agree not to misuse the site or interfere with its operation.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Quotes & Orders</h2>
+    <p class="mt-2 text-neutral-700">
+      Quotes shared via BoxRelay are based on specifications provided. Final orders are subject to vendor acceptance,
+      QC conditions, timelines, and payment terms agreed in writing.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Liability</h2>
+    <p class="mt-2 text-neutral-700">
+      To the maximum extent permitted by law, BoxRelay and PSM Packaging are not liable for indirect or consequential losses.
+    </p>
+
+    <h2 class="mt-8 text-xl font-bold">Changes</h2>
+    <p class="mt-2 text-neutral-700">
+      We may update these Terms periodically. Continued use of the site constitutes acceptance of the updated Terms.
+    </p>
+  </main>
+
+  <footer class="border-t border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-neutral-600 flex items-center justify-between">
+      <span>© <span id="year"></span> BoxRelay by PSM Packaging</span>
+      <nav class="space-x-4">
+        <a class="underline" href="/about.html">About</a>
+        <a class="underline" href="/privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
