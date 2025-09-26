@@ -9,5 +9,5 @@
   <rect class="badge" x="0" y="0" width="40" height="40" rx="10" ry="10"/>
   <text x="20" y="26" text-anchor="middle" class="txtDark" style="font:bold 22px Inter, Arial, sans-serif;">BR</text>
   <text x="50" y="26" class="txtDark" style="font:bold 18px Inter, Arial, sans-serif;">BoxRelay</text>
-  <text x="130" y="26" class="txtLight" style="font:600 14px Inter, Arial, sans-serif;">by PSM</text>
+  <text x="140" y="26" class="txtLight" style="font:600 14px Inter, Arial, sans-serif;">by PSM</text>
 </svg>
