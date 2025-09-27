@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
   <defs>
     <style>
       .bg{fill:#facc15;}
-      .txt{fill:#0a0a0a;font:bold 42px Inter, Arial, sans-serif;}
+      .txt{fill:#0a0a0a;font:800 36px Inter, Arial, sans-serif;}
     </style>
   </defs>
-  <rect class="bg" x="0" y="0" width="64" height="64" rx="10" ry="10"/>
-  <text class="txt" x="50%" y="58%" text-anchor="middle">BR</text>
+  <rect class="bg" x="0" y="0" width="64" height="64" rx="12" ry="12"/>
+  <!-- Perfect centering via text-anchor + dominant-baseline -->
+  <text class="txt" x="32" y="33" text-anchor="middle" dominant-baseline="middle">BR</text>
 </svg>
