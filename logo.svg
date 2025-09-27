@@ -1,13 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40">
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="40" viewBox="0 0 300 40">
   <defs>
     <style>
       .badge{fill:#facc15;}
-      .txtDark{fill:#0a0a0a;}
-      .txtLight{fill:#525252;}
+      .t-dark{fill:#0a0a0a;}
+      .t-muted{fill:#6b7280;}
+      .sr{font:700 22px Inter, Arial, sans-serif;}
+      .lg{font:800 20px Inter, Arial, sans-serif;}
+      .sm{font:700 16px Inter, Arial, sans-serif;}
     </style>
   </defs>
+
+  <!-- Yellow badge with BR -->
   <rect class="badge" x="0" y="0" width="40" height="40" rx="10" ry="10"/>
-  <text x="20" y="26" text-anchor="middle" class="txtDark" style="font:bold 22px Inter, Arial, sans-serif;">BR</text>
-  <text x="50" y="26" class="txtDark" style="font:bold 18px Inter, Arial, sans-serif;">BoxRelay</text>
-  <text x="140" y="26" class="txtLight" style="font:600 14px Inter, Arial, sans-serif;">by PSM</text>
+  <text x="20" y="26" text-anchor="middle" class="t-dark sr">BR</text>
+
+  <!-- Wordmark -->
+  <text x="56" y="26" class="t-dark lg">BoxRelay</text>
+  <!-- Extra horizontal room so it never clips -->
+  <text x="160" y="26" class="t-muted sm">by PSM</text>
 </svg>
