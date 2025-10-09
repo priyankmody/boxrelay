@@ -17,5 +17,5 @@
   <!-- Wordmark -->
   <text x="56" y="26" class="t-dark lg">BoxRelay</text>
   <!-- Extra horizontal room so it never clips -->
-  <text x="160" y="26" class="t-muted sm">by PSM</text>
+  <text x="152" y="26" class="t-muted sm">by PSM</text>
 </svg>
